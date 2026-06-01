@@ -1,0 +1,24 @@
+# Vite SPA routing + PHP API passthrough
+Options -MultiViews
+DirectoryIndex index.html index.php
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Server-side admin key used by /api/blogs.php
+  # Replace the value below with a strong secret before deploying.
+  SetEnv AB_BLOGS_ADMIN_KEY "CHANGE_ME_SUPER_SECRET_KEY"
+
+  # Serve existing files/directories directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Allow PHP and API endpoints to run normally
+  RewriteRule ^api/ - [L]
+  RewriteRule ^(.*)\.php$ - [L]
+
+  # Fallback all other routes to the SPA entry
+  RewriteRule . /index.html [L]
+</IfModule>
