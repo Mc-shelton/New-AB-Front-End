@@ -1,4 +1,5 @@
 import type { BlogItem } from './blogs';
+import type { SeriesItem } from './series';
 
 let cache: BlogItem[] | null = null;
 
@@ -23,3 +24,15 @@ export async function fetchBlogBySlug(slug: string): Promise<BlogItem | undefine
   return list.find((b) => b.slug === slug);
 }
 
+export async function fetchSeries(): Promise<SeriesItem[]> {
+  try {
+    const res = await fetch('/data/series.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('Failed');
+    const data = await res.json();
+    if (Array.isArray(data)) {
+      return data as SeriesItem[];
+    }
+  } catch {}
+  const { Series } = await import('./series');
+  return Series;
+}

@@ -17,7 +17,7 @@
     },
     {
         "title": "New Title",
-        "summary": "Short summary... ",
+        "summary": "This is the summary of the post",
         "url": "https://www.linkedin.com/",
         "author": "Shellton",
         "date": "2025",
@@ -27,8 +27,9 @@
             "Mission"
         ],
         "slug": "post-1756997651377",
-        "seriesId":"single",
-        "contentHtml": "content here"
+        "seriesId":"abs0001",
+        "contentHtml": "content here",
+        "image": "https://media.licdn.com/dms/image/v2/D4D12AQEeZp7QoyAzHw/article-cover_image-shrink_720_1280/B4DZkU1y5.HwAM-/0/1756991273506?e=1759968000&v=beta&t=-EEuEYBswiD50qedm9v694NTBWmo7WDuLdPa2mOJcss"
     },
     {
         "title": "Receipts of Righteousness",
