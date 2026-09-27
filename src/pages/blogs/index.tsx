@@ -166,7 +166,7 @@ function BlogGrid({blogs, navigate}: {blogs: any[]; navigate: ReturnType<typeof 
       {blogs.map((b) => (
         <div
           key={b.url}
-          className="group cursor-pointer rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm hover:shadow-md transition hover:border-amber-300"
+          className="group rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm hover:shadow-md transition hover:border-amber-300"
         >
           <div className="-mx-6 -mt-6 mb-4">
             <div className="aspect-[16/9] overflow-hidden rounded-t-2xl bg-neutral-100">
@@ -204,7 +204,7 @@ function BlogGrid({blogs, navigate}: {blogs: any[]; navigate: ReturnType<typeof 
           <div className="mt-5 flex gap-3">
             <button
               onClick={() => navigate(`/blogs/${b.slug}`)}
-              className="rounded-full bg-amber-600 text-white px-4 py-2 text-sm font-semibold hover:bg-amber-500"
+              className="cursor-pointer rounded-full bg-amber-600 text-white px-4 py-2 text-sm font-semibold hover:bg-amber-500"
             >
               Read on site
             </button>
