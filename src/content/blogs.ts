@@ -12,6 +12,8 @@ export type BlogItem = {
   image?: string; // optional hero/cover image
   audioVideoId?: string; // optional YouTube video id for background audio
   seriesId?: string; // if defined, blog is part of a series; if undefined, blog is single
+  episodeNumber?: number; // display and ordering within a series
+  publishedAt?: string; // ISO date used for newest-first ordering
 };
 
 export const Blogs: BlogItem[] = [
@@ -25,7 +27,6 @@ export const Blogs: BlogItem[] = [
     tags: ["Devotional", "Mission", "Culture"],
     slug: "being-salt-and-light-in-secular-places",
     audioVideoId: "aJeNUlNY7Iw",
-    seriesId: "secular-witness",
     // contentHtml: '<p>Paste the full HTML content here to render it on-site.</p>',
     image: ab_about,
   },

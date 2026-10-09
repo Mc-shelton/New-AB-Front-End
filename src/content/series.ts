@@ -5,14 +5,15 @@ export type SeriesItem = {
   title: string;
   image: string;
   summary?: string;
+  createdAt?: string;
 };
 
 export const Series: SeriesItem[] = [
   {
-    seriesId: "secular-witness",
-    title: "Secular Witness",
+    seriesId: "abs0001",
+    title: "Christ In The Streets",
     image: ab_about,
     summary:
-      "A series exploring how to live out the gospel in secular spaces, with practical insights and reflections from the Advent Band community.",
+      "Stories and reflections about meeting people with the hope of Christ in everyday places.",
   },
 ];

@@ -12,7 +12,9 @@ export async function fetchBlogs(): Promise<BlogItem[]> {
       cache = data as BlogItem[];
       return cache;
     }
-  } catch {}
+  } catch (error) {
+    void error;
+  }
   // Fallback to bundled list if fetch fails
   const { Blogs } = await import('./blogs');
   cache = Blogs;
@@ -32,7 +34,9 @@ export async function fetchSeries(): Promise<SeriesItem[]> {
     if (Array.isArray(data)) {
       return data as SeriesItem[];
     }
-  } catch {}
+  } catch (error) {
+    void error;
+  }
   const { Series } = await import('./series');
   return Series;
 }

@@ -26,3 +26,21 @@
   }
   
 }
+
+.admin-input {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: #171717;
+  font-weight: 400;
+}
+
+.admin-input:focus {
+  border-color: #d97706;
+  outline: 2px solid rgba(217, 119, 6, 0.18);
+  outline-offset: 1px;
+}

@@ -1,7 +1,8 @@
 [
     {
-        "seriesId":"abs0001",
+        "seriesId": "abs0001",
         "title": "Christ In The Streets",
-        "image":"https://adventband.org/share/extra/cis.jpg"
+        "summary": "Stories and reflections about meeting people with the hope of Christ in everyday places.",
+        "image": "https://adventband.org/share/extra/cis.jpg"
     }
 ]
